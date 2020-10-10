@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 	"regexp"
-	"searchreplacebot/pkg/util"
 	"strings"
 
+	"github.com/kf5grd/searchreplace-bot/pkg/util"
 	"samhofi.us/x/keybase/v2"
 	"samhofi.us/x/keybase/v2/types/chat1"
 	"samhofi.us/x/keybase/v2/types/stellar1"

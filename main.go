@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"searchreplacebot/cmd"
+	"github.com/kf5grd/searchreplace-bot/cmd"
 )
-
 
 // Exit code on failure
 const exitFail = 1

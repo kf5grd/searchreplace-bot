@@ -4,8 +4,8 @@ import (
 	"io"
 	"os"
 	"os/signal"
-	"searchreplacebot/pkg/logr"
 
+	"github.com/kf5grd/searchreplace-bot/pkg/logr"
 	"github.com/urfave/cli/v2"
 	"github.com/urfave/cli/v2/altsrc"
 	"samhofi.us/x/keybase/v2"

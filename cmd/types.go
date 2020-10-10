@@ -1,8 +1,7 @@
 package cmd
 
 import (
-	"searchreplacebot/pkg/logr"
-
+	"github.com/kf5grd/searchreplace-bot/pkg/logr"
 	"samhofi.us/x/keybase/v2"
 	"samhofi.us/x/keybase/v2/types/chat1"
 )
