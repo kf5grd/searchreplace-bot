@@ -5,7 +5,9 @@ replacer-basic = [ "|twitter.com|nitter.net" ]
 replacer-regex = ['''%.*(youtu\.be/|youtube\.com/watch\?v=)([a-zA-Z0-9_-]+).*%https://i.ytimg.com/vi/$2/hqdefault.jpg
 https://youtube.com/embed/$2''']
 
-filter-conv = [
-  "0000d7cf1e6f51d75f9a354c2cb7c3bd30415f184bbb9eba0c57aa50827b7663",
-  "0000d0cf70804671490e7f8f21c207a1ac6a8bc2ee05db804fb4531ab6c06f05",
-]
+# Uncomment below and fill this with your own conversation ids.
+# You can use `keybase chat conv-info --channel <channel name> <team name>` to get a conversation id
+#filter-conv = [
+#  "0000d7cf1e6f51d75f9a354c2cb7c3bd30415f184bbb9eba0c57aa50827b7663",
+#  "0000d0cf70804671490e7f8f21c207a1ac6a8bc2ee05db804fb4531ab6c06f05",
+#]
