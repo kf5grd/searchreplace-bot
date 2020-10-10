@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"regexp"
 	"strings"
 
@@ -84,6 +85,27 @@ func (b *bot) chatHandler(m chat1.MsgSummary) {
 				b.k.SendMessageByConvID(convID, "```keybase chat edit-bot-member -u '"+b.k.Username+"' -r 'restrictedbot' --allow-commands "+strings.Join(triggers, " ")+" '"+m.Channel.Name+"'```")
 				return
 			}
+		}
+
+		if strings.HasPrefix(text, "!sr about") {
+			var donations string
+			backTick := "`"
+
+			if b.k.Username == "dont_furl_me_bro" {
+				donations = `
+
+Server resources are very limited around here, and any donations you'd like to send me are greatly appreciated! If you'd like to make a donation to help offset server costs, you can do so by sending me XLM from your Keybase wallet. Any amount helps!
+`
+			}
+			aboutMsg := fmt.Sprintf(`*SearchReplaceBot* _ by @dxb _
+
+This is a fairly simple bot which watches for certain text, replaces it with something else, and replies with the result. If you'd like to run your own instance of the bot you can download its source code at https://github.com/kf5grd/searchreplace-bot.
+
+If you'd like to add this particular instance of the bot to your own conversation, send me the command %s!sr add <CONVERSATION>%s, where %s<CONVERSATION>%s is the name of the team, or PM you'd like to add me to, then copy the command I send you and paste it into your terminal.%s
+`, backTick, backTick, backTick, backTick, donations)
+
+			b.k.SendMessageByConvID(convID, aboutMsg)
+			return
 		}
 
 		for _, r := range b.replacersRegex {

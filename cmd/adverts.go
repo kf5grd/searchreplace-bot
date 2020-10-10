@@ -22,6 +22,10 @@ func (b *bot) advertiseCommands() {
 						Name:        "sr edit",
 						Description: "Get the command to edit this bot as a restricted bot to include all of its triggers",
 					},
+					{
+						Name:        "sr about",
+						Description: "Some information about the bot",
+					},
 				},
 			},
 		},
