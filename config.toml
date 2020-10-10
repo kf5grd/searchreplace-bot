@@ -2,7 +2,7 @@ debug = true
 disable-ads = false
 
 replacer-basic = [ "|twitter.com|nitter.net" ]
-replacer-regex = ['''%.*(youtu\.be/|youtube\.com/watch\?v=)([a-zA-Z0-9_]+).*%https://youtube.com/embed/$2
+replacer-regex = ['''%.*(youtu\.be/|youtube\.com/watch\?v=)([a-zA-Z0-9_-]+).*%https://youtube.com/embed/$2
 https://i.ytimg.com/vi/$2/hqdefault.jpg''']
 
 filter-conv = [
