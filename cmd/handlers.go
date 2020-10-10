@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"regexp"
+	"searchreplacebot/pkg/util"
 	"strings"
 
 	"samhofi.us/x/keybase/v2"
@@ -35,6 +36,10 @@ func (b *bot) chatHandler(m chat1.MsgSummary) {
 	)
 
 	if userName == b.k.Username {
+		return
+	}
+
+	if len(b.filterConvs) > 0 && !util.ConvIDInSlice(convID, b.filterConvs) {
 		return
 	}
 

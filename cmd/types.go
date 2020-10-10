@@ -4,6 +4,7 @@ import (
 	"searchreplacebot/pkg/logr"
 
 	"samhofi.us/x/keybase/v2"
+	"samhofi.us/x/keybase/v2/types/chat1"
 )
 
 type bot struct {
@@ -13,4 +14,5 @@ type bot struct {
 	log            *logr.Logger
 	replacersBasic []string
 	replacersRegex []string
+	filterConvs    []chat1.ConvIDStr
 }
